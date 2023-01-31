@@ -10,12 +10,16 @@ const keyInfo = {
 
 const config = {
   initialMessages: [
-    createChatBotMessage(`${keyInfo.userName}님, 안녕하세요.`),
-    createChatBotMessage(`지금부터 제가 ${keyInfo.formName} 안내를 도와드릴게요.`, {delay: 2000}),
-    createChatBotMessage('재발급 사유를 아래에서 선택해주세요.', {
-      delay: 4000,
+    createChatBotMessage(`${keyInfo.userName}님, 안녕하세요.
+    지금부터 제가 ${keyInfo.formName} 안내를 도와드릴게요.\n재발급 사유를 아래에서 선택해주세요.`, {
       widget: "reasons",
     }),
+    // createChatBotMessage(`${keyInfo.userName}님, 안녕하세요.`),
+    // createChatBotMessage(`지금부터 제가 ${keyInfo.formName} 안내를 도와드릴게요.`, {delay: 2000}),
+    // createChatBotMessage('재발급 사유를 아래에서 선택해주세요.', {
+    //   delay: 4000,
+    //   widget: "reasons",
+    // }),
   ],
   widgets: [
     {
@@ -25,7 +29,7 @@ const config = {
   ],
   customStyles: {
     botMessageBox: {
-      backgroundColor: "#fcda42",
+      backgroundColor: "#C5C5C5",
     },
     chatButton: {
       backgroundColor: "red",

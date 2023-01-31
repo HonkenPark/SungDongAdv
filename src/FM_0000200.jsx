@@ -5,7 +5,7 @@ import ActionProvider from './ActionProvider';
 import MessageParser from './MessageParser';
 import config from './config';
 
-const Form000000 = () => {
+const FM_0000200 = () => {
   return (
     <>
       <Chatbot
@@ -17,4 +17,4 @@ const Form000000 = () => {
   )
 }
 
-export default Form000000;
+export default FM_0000200;
