@@ -29,7 +29,7 @@ const HeaderBackground = styled.div`
   position: display;
   width: 1080px;
   height: 140px;
-  background: #143c79;
+  background: #033075;
 `;
 
 const MoveToImage = styled.img`

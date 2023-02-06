@@ -35,7 +35,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     const userMessage = createClientMessage(text)
     const responseMessage = parseMsgByReason(value);
     const reasonMessage = createChatBotMessage(responseMessage);
-    const reasonMessage2 = createChatBotMessage('아래 내용을 확인하신 후, ‘다음’을 눌러주세요.', {
+    const reasonMessage2 = createChatBotMessage('아래 내용을 확인해주세요.', {
       delay: 800,
       widget: "switches",
     });
