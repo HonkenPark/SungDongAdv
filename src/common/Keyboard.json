@@ -1,0 +1,2844 @@
+﻿{
+
+    "keyInfo" : {
+
+        "info" :{
+            
+            "background" :{
+                
+                "width" : 454,
+                "height" : 220
+                
+            },
+            "keypad" :{
+                
+                "width" : 34,
+                "height" : 34
+                
+            },
+            "layouts" : 7
+        }
+
+    },
+
+
+    "keyFixed" : [
+        
+    
+            {
+                "character": "BACKSPACE",
+                "point": {
+                    "x": 326.1,
+                    "y": 131.9
+                },
+                "scale": {
+                    "width": 73,
+                    "height": 34
+                
+                },
+                "image": "Backspace.png"
+            },
+            {
+                "character": " ",
+                "point": {
+                    "x": 171.3,
+                    "y": 170.6
+                },
+                "scale": {
+                    "width": 73,
+                    "height": 34
+                
+                },
+                "image": "Space.png"
+            
+            
+            },
+            {
+                "character": "CLEAR",
+                "point": {
+                    "x": 248.7,
+                    "y": 170.6
+                },
+                "scale": {
+                    "width": 73,
+                    "height": 34
+                
+                },
+                "image": "Clear.png"
+            },
+            {
+                "character": "DONE",
+                "point": {
+                    "x": 326.1,
+                    "y": 170.6
+                },
+                "scale": {
+                    "width": 112,
+                    "height": 34
+                },
+                "image": "Done.png"
+            }
+        
+        
+    ],
+
+    "keylayoutFixed" :
+                    {
+        "layoutsFixeds" :
+        [
+            {
+                "layoutFixed":
+                [
+                    {
+                        "character": "SHIFT",
+                        "point": {
+                            "x": 16.5,
+                            "y": 132
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "Shift.png"
+                    },
+                    {
+                        "character": "CHANGE",
+                        "point": {
+                            "x": 94.1,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "ChangeLayout.png"
+                    },
+                    {
+                        "character": "CAPS",
+                        "point": {
+                            "x": 16.5,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 73,
+                            "height": 34
+                        },
+                        "image": "Caps.png"
+                    
+                    },
+                    {
+                    
+                        "character": "KREN",
+                        "point": {
+                            "x": 132.8,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "en.png"
+                    
+                    }
+                    ]
+                    },
+                    {
+                    "layoutFixed":[
+                    {
+                        "character": "SHIFT",
+                        "point": {
+                            "x": 15,
+                            "y": 132
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "Shift2.png"
+                    },
+                    {
+                        "character": "CHANGE",
+                        "point": {
+                            "x": 94.1,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "ChangeLayout.png"
+                    },
+                    {
+                        "character": "CAPS",
+                        "point": {
+                            "x": 16.5,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 73,
+                            "height": 34
+                        },
+                        "image": "Caps.png"
+                    
+                    },
+                    {
+                    
+                        "character": "KREN",
+                        "point": {
+                            "x": 132.8,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "en.png"
+                    
+                    }
+                    ]
+                    },
+                    {
+                    "layoutFixed":[
+                    {
+                        "character": "CHANGE",
+                        "point": {
+                            "x": 94.1,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "ChangeLayout_s.png"
+                    },
+                    {
+                        "character": "CAPS",
+                        "point": {
+                            "x": 16.5,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 73,
+                            "height": 34
+                        },
+                        "image": "Caps.png"
+                    
+                    },
+                    {
+                    
+                        "character": "KREN",
+                        "point": {
+                            "x": 132.8,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "en.png"
+                    
+                    }
+                    ]
+                    },
+                    {
+                    
+
+                    "layoutFixed":[
+                    {
+                        "character": "SHIFT",
+                        "point": {
+                            "x": 15,
+                            "y": 132
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "Shift.png"
+                    },
+                    {
+                        "character": "CHANGE",
+                        "point": {
+                            "x": 94.1,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "ChangeLayout.png"
+                    },
+                    {
+                        "character": "CAPS",
+                        "point": {
+                            "x": 16.5,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 73,
+                            "height": 34
+                        },
+                        "image": "Caps.png"
+                    
+                    },
+                    {
+                    
+                        "character": "KREN",
+                        "point": {
+                            "x": 132.8,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "kr.png"
+                    
+                    }
+                    ]
+                    },
+                    {
+                    "layoutFixed":[
+                    {
+                        "character": "SHIFT",
+                        "point": {
+                            "x": 15,
+                            "y": 132
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "Shift2.png"
+                    },
+                    {
+                        "character": "CHANGE",
+                        "point": {
+                            "x": 94.1,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "ChangeLayout.png"
+                    },
+                    {
+                        "character": "CAPS",
+                        "point": {
+                            "x": 16.5,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 73,
+                            "height": 34
+                        },
+                        "image": "Caps.png"
+                    
+                    },
+                    {
+                    
+                        "character": "KREN",
+                        "point": {
+                            "x": 132.8,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "kr.png"
+                    
+                    }
+                    ]
+                    },
+                    {
+                    "layoutFixed":[
+                    {
+                        "character": "SHIFT",
+                        "point": {
+                            "x": 15,
+                            "y": 132
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "Shift.png"
+                    },
+                    {
+                        "character": "CHANGE",
+                        "point": {
+                            "x": 94.1,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "ChangeLayout.png"
+                    },
+                    {
+                        "character": "CAPS",
+                        "point": {
+                            "x": 16.5,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 73,
+                            "height": 34
+                        },
+                        "image": "Caps_s.png"
+                    
+                    },
+                    {
+                    
+                        "character": "KREN",
+                        "point": {
+                            "x": 132.8,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "kr.png"
+                    
+                    }
+                    ]
+                    },
+                    {
+                    "layoutFixed":[
+                    {
+                        "character": "SHIFT",
+                        "point": {
+                            "x": 15,
+                            "y": 132
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "Shift.png"
+                    },
+                    {
+                        "character": "CHANGE",
+                        "point": {
+                            "x": 94.1,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "ChangeLayout.png"
+                    },
+                    {
+                        "character": "CAPS",
+                        "point": {
+                            "x": 16.5,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 73,
+                            "height": 34
+                        },
+                        "image": "Caps_s.png"
+                    
+                    },
+                    {
+                    
+                        "character": "KREN",
+                        "point": {
+                            "x": 132.8,
+                            "y": 170.6
+                        },
+                        "scale": {
+                            "width": 34,
+                            "height": 34
+                        },
+                        "image": "en.png"
+                    }
+                ]
+            }
+        ]
+    },
+
+
+    "keyLayouts" : {
+        "layouts": [
+                {
+            
+                "layout": [
+                    {
+                        
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 210,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 15.5
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "1",
+                                "image": "1.png"
+                            },
+                            {
+                                "character": "2",
+                                "image": "2.png"
+                            },
+                            {
+                                "character": "3",
+                                "image": "3.png"
+                            },
+                            {
+                                "character": "4",
+                                "image": "4.png"
+                            },
+                            {
+                                "character": "5",
+                                "image": "5.png"
+                            },
+                            {
+                                "character": "6",
+                                "image": "6.png"
+                            },
+                            {
+                                "character": "7",
+                                "image": "7.png"
+                            },
+                            {
+                                "character": "8",
+                                "image": "8.png"
+                            },
+                            {
+                                "character": "9",
+                                "image": "9.png"
+                            },
+                            {
+                                "character": "0",
+                                "image": "0.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 210,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 54.3
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "q",
+                                "image": "LowerQ.png"
+                            },
+                            {
+                                "character": "w",
+                                "image": "LowerW.png"
+                            },
+                            {
+                                "character": "e",
+                                "image": "LowerE.png"
+                            },
+                            {
+                                "character": "r",
+                                "image": "LowerR.png"
+                            },
+                            {
+                                "character": "t",
+                                "image": "LowerT.png"
+                            },
+                            {
+                                "character": "y",
+                                "image": "LowerY.png"
+                            },
+                            {
+                                "character": "u",
+                                "image": "LowerU.png"
+                            },
+                            {
+                                "character": "i",
+                                "image": "LowerI.png"
+                            },
+                            {
+                                "character": "o",
+                                "image": "LowerO.png"
+                            },
+                            {
+                                "character": "p",
+                                "image": "LowerP.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 210,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 93.1
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "a",
+                                "image": "LowerA.png"
+                            },
+                            {
+                                "character": "s",
+                                "image": "LowerS.png"
+                            },
+                            {
+                                "character": "d",
+                                "image": "LowerD.png"
+                            },
+                            {
+                                "character": "f",
+                                "image": "LowerF.png"
+                            },
+                            {
+                                "character": "g",
+                                "image": "LowerG.png"
+                            },
+                            {
+                                "character": "h",
+                                "image": "LowerH.png"
+                            },
+                            {
+                                "character": "j",
+                                "image": "LowerJ.png"
+                            },
+                            {
+                                "character": "k",
+                                "image": "LowerK.png"
+                            },
+                            {
+                                "character": "l",
+                                "image": "LowerL.png"
+                            }
+                        ]
+                    },
+                    {
+                
+                        "points": [
+                            {
+                                "x": 55.2,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 210,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 131.9
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "z",
+                                "image": "LowerZ.png"
+                            },
+                            {
+                                "character": "x",
+                                "image": "LowerX.png"
+                            },
+                            {
+                                "character": "c",
+                                "image": "LowerC.png"
+                            },
+                            {
+                                "character": "v",
+                                "image": "LowerV.png"
+                            },
+                            {
+                                "character": "b",
+                                "image": "LowerB.png"
+                            },
+                            {
+                                "character": "n",
+                                "image": "LowerN.png"
+                            },
+                            {
+                                "character": "m",
+                                "image": "LowerM.png"
+                            }
+                        ]
+                    }
+                
+            ]
+            },
+            {
+                "layout" : [
+                        {
+                        
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 210,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 15.5
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "1",
+                                "image": "1.png"
+                            },
+                            {
+                                "character": "2",
+                                "image": "2.png"
+                            },
+                            {
+                                "character": "3",
+                                "image": "3.png"
+                            },
+                            {
+                                "character": "4",
+                                "image": "4.png"
+                            },
+                            {
+                                "character": "5",
+                                "image": "5.png"
+                            },
+                            {
+                                "character": "6",
+                                "image": "6.png"
+                            },
+                            {
+                                "character": "7",
+                                "image": "7.png"
+                            },
+                            {
+                                "character": "8",
+                                "image": "8.png"
+                            },
+                            {
+                                "character": "9",
+                                "image": "9.png"
+                            },
+                            {
+                                "character": "0",
+                                "image": "0.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                    "points": [
+                            {
+                                "x": 16.5,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 54.3
+                            },	
+                            {
+                                "x": 132.6,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 210,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 54.3
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "Q",
+                                "image": "UpperQ.png"
+                            },
+                            {
+                                "character": "W",
+                                "image": "UpperW.png"
+                            },
+                            {
+                                "character": "E",
+                                "image": "UpperE.png"
+                            },
+                            {
+                                "character": "R",
+                                "image": "UpperR.png"
+                            },
+                            {
+                                "character": "T",
+                                "image": "UpperT.png"
+                            },
+                            {
+                                "character": "Y",
+                                "image": "UpperY.png"
+                            },
+                            {
+                                "character": "U",
+                                "image": "UpperU.png"
+                            },
+                            {
+                                "character": "I",
+                                "image": "UpperI.png"
+                            },
+                            {
+                                "character": "O",
+                                "image": "UpperO.png"
+                            },
+                            {
+                                "character": "P",
+                                "image": "UpperP.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 210,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 93.1
+                            }
+                        ],
+
+
+                        "keys": [
+                            {
+                                "character": "A",
+                                "image": "UpperA.png"
+                            },
+                            {
+                                "character": "S",
+                                "image": "UpperS.png"
+                            },
+                            {
+                                "character": "D",
+                                "image": "UpperD.png"
+                            },
+                            {
+                                "character": "F",
+                                "image": "UpperF.png"
+                            },
+                            {
+                                "character": "G",
+                                "image": "UpperG.png"
+                            },
+                            {
+                                "character": "H",
+                                "image": "UpperH.png"
+                            },
+                            {
+                                "character": "J",
+                                "image": "UpperJ.png"
+                            },
+                            {
+                                "character": "K",
+                                "image": "UpperK.png"
+                            },
+                            {
+                                "character": "L",
+                                "image": "UpperL.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 55.2,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 210,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 131.9
+                            }
+                        ],
+
+                        "keys": [
+                            {
+                                "character": "Z",
+                                "image": "UpperZ.png"
+                            },
+                            {
+                                "character": "X",
+                                "image": "UpperX.png"
+                            },
+                            {
+                                "character": "C",
+                                "image": "UpperC.png"
+                            },
+                            {
+                                "character": "V",
+                                "image": "UpperV.png"
+                            },
+                            {
+                                "character": "B",
+                                "image": "UpperB.png"
+                            },
+                            {
+                                "character": "N",
+                                "image": "UpperN.png"
+                            },
+                            {
+                                "character": "M",
+                                "image": "UpperM.png"
+                            }
+                        ]
+                    }
+                ]
+                },
+                {"layout": [
+                    {
+                        "type": "insert",
+                    "points": [
+                            {
+                                "x": 16.5,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 210,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 15.5
+                            }
+                        ],
+
+                        "keys": [
+                            {
+                                "character": "~",
+                                "image": "Special01.png"
+                            },
+                            {
+                                "character": "!",
+                                "image": "Special02.png"
+                            },
+                            {
+                                "character": "@",
+                                "image": "Special03.png"
+                            },
+                            {
+                                "character": "#",
+                                "image": "Special04.png"
+                            },
+                            {
+                                "character": "$",
+                                "image": "Special05.png"
+                            },
+                            {
+                                "character": "%",
+                                "image": "Special06.png"
+                            },
+                            {
+                                "character": "^",
+                                "image": "Special07.png"
+                            },
+                            {
+                                "character": "&",
+                                "image": "Special08.png"
+                            },
+                            {
+                                "character": "*",
+                                "image": "Special09.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 54.3
+                            },	
+                            {
+                                "x": 132.6,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 210,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 54.3
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "(",
+                                "image": "Special10.png"
+                            },
+                            {
+                                "character": ")",
+                                "image": "Special11.png"
+                            },
+                            {
+                                "character": "-",
+                                "image": "Special12.png"
+                            },
+                            {
+                                "character": "+",
+                                "image": "Special13.png"
+                            },
+                            {
+                                "character": "=",
+                                "image": "Special14.png"
+                            },
+                            {
+                                "character": "|",
+                                "image": "Special15.png"
+                            },
+                            {
+                                "character": "\\",
+                                "image": "Special16.png"
+                            },
+                            {
+                                "character": "[",
+                                "image": "Special17.png"
+                            },
+                            {
+                                "character": "]",
+                                "image": "Special18.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 210,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 93.1
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "{",
+                                "image": "Special19.png"
+                            },
+                            {
+                                "character": "}",
+                                "image": "Special20.png"
+                            },
+                            {
+                                "character": ":",
+                                "image": "Special21.png"
+                            },
+                            {
+                                "character": ";",
+                                "image": "Special22.png"
+                            },
+                            {
+                                "character": "\"",
+                                "image": "Special23.png"
+                            },
+                            {
+                                "character": "'",
+                                "image": "Special24.png"
+                            },
+                            {
+                                "character": "<",
+                                "image": "Special25.png"
+                            },
+                            {
+                                "character": ">",
+                                "image": "Special26.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                    "points": [
+                            {
+                                "x": 16.5,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 210,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 131.9
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": ",",
+                                "image": "Special27.png"
+                            },
+                            {
+                                "character": ".",
+                                "image": "Special28.png"
+                            },
+                            {
+                                "character": "?",
+                                "image": "Special29.png"
+                            },
+                            {
+                                "character": "/",
+                                "image": "Special30.png"
+                            },
+                            {
+                                "character": "_",
+                                "image": "Special31.png"
+                            },
+                            {
+                                "character": "`",
+                                "image": "Special32.png"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+            
+                "layout": [
+                    {
+                        
+                    "points": [
+                            {
+                                "x": 16.5,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 15.5
+                            },	
+                            {
+                                "x": 171.3,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 210,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 15.5
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "1",
+                                "image": "1.png"
+                            },
+                            {
+                                "character": "2",
+                                "image": "2.png"
+                            },
+                            {
+                                "character": "3",
+                                "image": "3.png"
+                            },
+                            {
+                                "character": "4",
+                                "image": "4.png"
+                            },
+                            {
+                                "character": "5",
+                                "image": "5.png"
+                            },
+                            {
+                                "character": "6",
+                                "image": "6.png"
+                            },
+                            {
+                                "character": "7",
+                                "image": "7.png"
+                            },
+                            {
+                                "character": "8",
+                                "image": "8.png"
+                            },
+                            {
+                                "character": "9",
+                                "image": "9.png"
+                            },
+                            {
+                                "character": "0",
+                                "image": "0.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 54.3
+                            },	
+                            {
+                                "x": 132.6,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 210,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 54.3
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "ㅂ",
+                                "image": "kor_q.png"
+                            },
+                            {
+                                "character": "ㅈ",
+                                "image": "kor_w.png"
+                            },
+                            {
+                                "character": "ㄷ",
+                                "image": "kor_e.png"
+                            },
+                            {
+                                "character": "ㄱ",
+                                "image": "kor_r.png"
+                            },
+                            {
+                                "character": "ㅅ",
+                                "image": "kor_t.png"
+                            },
+                            {
+                                "character": "ㅛ",
+                                "image": "kor_y.png"
+                            },
+                            {
+                                "character": "ㅕ",
+                                "image": "kor_u.png"
+                            },
+                            {
+                                "character": "ㅑ",
+                                "image": "kor_i.png"
+                            },
+                            {
+                                "character": "ㅐ",
+                                "image": "kor_o.png"
+                            },
+                            {
+                                "character": "ㅔ",
+                                "image": "kor_p.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 210,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 93.1
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "ㅁ",
+                                "image": "kor_a.png"
+                            },
+                            {
+                                "character": "ㄴ",
+                                "image": "kor_s.png"
+                            },
+                            {
+                                "character": "ㅇ",
+                                "image": "kor_d.png"
+                            },
+                            {
+                                "character": "ㄹ",
+                                "image": "kor_f.png"
+                            },
+                            {
+                                "character": "ㅎ",
+                                "image": "kor_g.png"
+                            },
+                            {
+                                "character": "ㅗ",
+                                "image": "kor_h.png"
+                            },
+                            {
+                                "character": "ㅓ",
+                                "image": "kor_j.png"
+                            },
+                            {
+                                "character": "ㅏ",
+                                "image": "kor_k.png"
+                            },
+                            {
+                                "character": "ㅣ",
+                                "image": "kor_l.png"
+                            }
+                        ]
+                    },
+                    {
+                
+                        "points": [
+                            {
+                                "x": 55.2,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 210,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 131.9
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "ㅋ",
+                                "image": "kor_z.png"
+                            },
+                            {
+                                "character": "ㅌ",
+                                "image": "kor_x.png"
+                            },
+                            {
+                                "character": "ㅊ",
+                                "image": "kor_c.png"
+                            },
+                            {
+                                "character": "ㅍ",
+                                "image": "kor_v.png"
+                            },
+                            {
+                                "character": "ㅠ",
+                                "image": "kor_b.png"
+                            },
+                            {
+                                "character": "ㅜ",
+                                "image": "kor_n.png"
+                            },
+                            {
+                                "character": "ㅡ",
+                                "image": "kor_m.png"
+                            }
+                        ]
+                    }
+                
+            ]
+            },
+            {
+                "layout" : [
+                        {
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 15.5
+                            },	
+                            {
+                                "x": 171.3,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 210,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 15.5
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "1",
+                                "image": "1.png"
+                            },
+                            {
+                                "character": "2",
+                                "image": "2.png"
+                            },
+                            {
+                                "character": "3",
+                                "image": "3.png"
+                            },
+                            {
+                                "character": "4",
+                                "image": "4.png"
+                            },
+                            {
+                                "character": "5",
+                                "image": "5.png"
+                            },
+                            {
+                                "character": "6",
+                                "image": "6.png"
+                            },
+                            {
+                                "character": "7",
+                                "image": "7.png"
+                            },
+                            {
+                                "character": "8",
+                                "image": "8.png"
+                            },
+                            {
+                                "character": "9",
+                                "image": "9.png"
+                            },
+                            {
+                                "character": "0",
+                                "image": "0.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 54.3
+                            },	
+                            {
+                                "x": 132.6,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 210,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 54.3
+                            }
+                        ],
+
+                        "keys": [
+                            {
+                                "character": "ㅃ",
+                                "image": "kor_qq.png"
+                            },
+                            {
+                                "character": "ㅉ",
+                                "image": "kor_ww.png"
+                            },
+                            {
+                                "character": "ㄸ",
+                                "image": "kor_ee.png"
+                            },
+                            {
+                                "character": "ㄲ",
+                                "image": "kor_rr.png"
+                            },
+                            {
+                                "character": "ㅆ",
+                                "image": "kor_tt.png"
+                            },
+                            {
+                                "character": "ㅛ",
+                                "image": "kor_y.png"
+                            },
+                            {
+                                "character": "ㅕ",
+                                "image": "kor_u.png"
+                            },
+                            {
+                                "character": "ㅑ",
+                                "image": "kor_i.png"
+                            },
+                            {
+                                "character": "ㅒ",
+                                "image": "kor_oo.png"
+                            },
+                            {
+                                "character": "ㅖ",
+                                "image": "kor_pp.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 93.1
+                            },	
+                            {
+                                "x": 132.6,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 210,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 93.1
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "ㅁ",
+                                "image": "kor_a.png"
+                            },
+                            {
+                                "character": "ㄴ",
+                                "image": "kor_s.png"
+                            },
+                            {
+                                "character": "ㅇ",
+                                "image": "kor_d.png"
+                            },
+                            {
+                                "character": "ㄹ",
+                                "image": "kor_f.png"
+                            },
+                            {
+                                "character": "ㅎ",
+                                "image": "kor_g.png"
+                            },
+                            {
+                                "character": "ㅗ",
+                                "image": "kor_h.png"
+                            },
+                            {
+                                "character": "ㅓ",
+                                "image": "kor_j.png"
+                            },
+                            {
+                                "character": "ㅏ",
+                                "image": "kor_k.png"
+                            },
+                            {
+                                "character": "ㅣ",
+                                "image": "kor_l.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                    "points": [
+                            {
+                                "x": 55.2,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 210,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 131.9
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "ㅋ",
+                                "image": "kor_z.png"
+                            },
+                            {
+                                "character": "ㅌ",
+                                "image": "kor_x.png"
+                            },
+                            {
+                                "character": "ㅊ",
+                                "image": "kor_c.png"
+                            },
+                            {
+                                "character": "ㅍ",
+                                "image": "kor_v.png"
+                            },
+                            {
+                                "character": "ㅠ",
+                                "image": "kor_b.png"
+                            },
+                            {
+                                "character": "ㅜ",
+                                "image": "kor_n.png"
+                            },
+                            {
+                                "character": "ㅡ",
+                                "image": "kor_m.png"
+                            }
+                        ]
+                    }
+                ]
+                },
+                {
+                "layout" : [
+                        {
+                        
+                    "points": [
+                            {
+                                "x": 16.5,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 15.5
+                            },	
+                            {
+                                "x": 171.3,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 210,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 15.5
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "1",
+                                "image": "1.png"
+                            },
+                            {
+                                "character": "2",
+                                "image": "2.png"
+                            },
+                            {
+                                "character": "3",
+                                "image": "3.png"
+                            },
+                            {
+                                "character": "4",
+                                "image": "4.png"
+                            },
+                            {
+                                "character": "5",
+                                "image": "5.png"
+                            },
+                            {
+                                "character": "6",
+                                "image": "6.png"
+                            },
+                            {
+                                "character": "7",
+                                "image": "7.png"
+                            },
+                            {
+                                "character": "8",
+                                "image": "8.png"
+                            },
+                            {
+                                "character": "9",
+                                "image": "9.png"
+                            },
+                            {
+                                "character": "0",
+                                "image": "0.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 54.3
+                            },	
+                            {
+                                "x": 132.6,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 210,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 54.3
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "ㅃ",
+                                "image": "kor_qq.png"
+                            },
+                            {
+                                "character": "ㅉ",
+                                "image": "kor_ww.png"
+                            },
+                            {
+                                "character": "ㄸ",
+                                "image": "kor_ee.png"
+                            },
+                            {
+                                "character": "ㄲ",
+                                "image": "kor_rr.png"
+                            },
+                            {
+                                "character": "ㅆ",
+                                "image": "kor_tt.png"
+                            },
+                            {
+                                "character": "ㅛ",
+                                "image": "kor_y.png"
+                            },
+                            {
+                                "character": "ㅕ",
+                                "image": "kor_u.png"
+                            },
+                            {
+                                "character": "ㅑ",
+                                "image": "kor_i.png"
+                            },
+                            {
+                                "character": "ㅒ",
+                                "image": "kor_oo.png"
+                            },
+                            {
+                                "character": "ㅖ",
+                                "image": "kor_pp.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                    "points": [
+                            {
+                                "x": 16.5,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 93.1
+                            },	
+                            {
+                                "x": 132.6,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 210,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 93.1
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "ㅁ",
+                                "image": "kor_a.png"
+                            },
+                            {
+                                "character": "ㄴ",
+                                "image": "kor_s.png"
+                            },
+                            {
+                                "character": "ㅇ",
+                                "image": "kor_d.png"
+                            },
+                            {
+                                "character": "ㄹ",
+                                "image": "kor_f.png"
+                            },
+                            {
+                                "character": "ㅎ",
+                                "image": "kor_g.png"
+                            },
+                            {
+                                "character": "ㅗ",
+                                "image": "kor_h.png"
+                            },
+                            {
+                                "character": "ㅓ",
+                                "image": "kor_j.png"
+                            },
+                            {
+                                "character": "ㅏ",
+                                "image": "kor_k.png"
+                            },
+                            {
+                                "character": "ㅣ",
+                                "image": "kor_l.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 55.2,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 210,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 131.9
+                            }
+                        ],
+
+                        "keys": [
+                            {
+                                "character": "ㅋ",
+                                "image": "kor_z.png"
+                            },
+                            {
+                                "character": "ㅌ",
+                                "image": "kor_x.png"
+                            },
+                            {
+                                "character": "ㅊ",
+                                "image": "kor_c.png"
+                            },
+                            {
+                                "character": "ㅍ",
+                                "image": "kor_v.png"
+                            },
+                            {
+                                "character": "ㅠ",
+                                "image": "kor_b.png"
+                            },
+                            {
+                                "character": "ㅜ",
+                                "image": "kor_n.png"
+                            },
+                            {
+                                "character": "ㅡ",
+                                "image": "kor_m.png"
+                            }
+                        ]
+                    }
+                ]
+                },
+                {
+                "layout" : [
+                        {
+                    "points": [
+                            {
+                                "x": 16.5,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 210,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 15.5
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 15.5
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "1",
+                                "image": "1.png"
+                            },
+                            {
+                                "character": "2",
+                                "image": "2.png"
+                            },
+                            {
+                                "character": "3",
+                                "image": "3.png"
+                            },
+                            {
+                                "character": "4",
+                                "image": "4.png"
+                            },
+                            {
+                                "character": "5",
+                                "image": "5.png"
+                            },
+                            {
+                                "character": "6",
+                                "image": "6.png"
+                            },
+                            {
+                                "character": "7",
+                                "image": "7.png"
+                            },
+                            {
+                                "character": "8",
+                                "image": "8.png"
+                            },
+                            {
+                                "character": "9",
+                                "image": "9.png"
+                            },
+                            {
+                                "character": "0",
+                                "image": "0.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 16.5,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 54.3
+                            },	
+                            {
+                                "x": 132.6,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 210,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 54.3
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 54.3
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "Q",
+                                "image": "UpperQ.png"
+                            },
+                            {
+                                "character": "W",
+                                "image": "UpperW.png"
+                            },
+                            {
+                                "character": "E",
+                                "image": "UpperE.png"
+                            },
+                            {
+                                "character": "R",
+                                "image": "UpperR.png"
+                            },
+                            {
+                                "character": "T",
+                                "image": "UpperT.png"
+                            },
+                            {
+                                "character": "Y",
+                                "image": "UpperY.png"
+                            },
+                            {
+                                "character": "U",
+                                "image": "UpperU.png"
+                            },
+                            {
+                                "character": "I",
+                                "image": "UpperI.png"
+                            },
+                            {
+                                "character": "O",
+                                "image": "UpperO.png"
+                            },
+                            {
+                                "character": "P",
+                                "image": "UpperP.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                    "points": [
+                            {
+                                "x": 16.5,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 55.2,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 210,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 364.8,
+                                "y": 93.1
+                            },
+                            {
+                                "x": 403.5,
+                                "y": 93.1
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "A",
+                                "image": "UpperA.png"
+                            },
+                            {
+                                "character": "S",
+                                "image": "UpperS.png"
+                            },
+                            {
+                                "character": "D",
+                                "image": "UpperD.png"
+                            },
+                            {
+                                "character": "F",
+                                "image": "UpperF.png"
+                            },
+                            {
+                                "character": "G",
+                                "image": "UpperG.png"
+                            },
+                            {
+                                "character": "H",
+                                "image": "UpperH.png"
+                            },
+                            {
+                                "character": "J",
+                                "image": "UpperJ.png"
+                            },
+                            {
+                                "character": "K",
+                                "image": "UpperK.png"
+                            },
+                            {
+                                "character": "L",
+                                "image": "UpperL.png"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "insert",
+                        "points": [
+                            {
+                                "x": 55.2,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 93.9,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 132.6,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 171.3,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 210,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 248.7,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 287.4,
+                                "y": 131.9
+                            },
+                            {
+                                "x": 326.1,
+                                "y": 131.9
+                            }
+                        ],
+                        "keys": [
+                            {
+                                "character": "Z",
+                                "image": "UpperZ.png"
+                            },
+                            {
+                                "character": "X",
+                                "image": "UpperX.png"
+                            },
+                            {
+                                "character": "C",
+                                "image": "UpperC.png"
+                            },
+                            {
+                                "character": "V",
+                                "image": "UpperV.png"
+                            },
+                            {
+                                "character": "B",
+                                "image": "UpperB.png"
+                            },
+                            {
+                                "character": "N",
+                                "image": "UpperN.png"
+                            },
+                            {
+                                "character": "M",
+                                "image": "UpperM.png"
+                            }
+                        ]
+                    }
+                ]
+            }
+            
+        ]
+    }
+}

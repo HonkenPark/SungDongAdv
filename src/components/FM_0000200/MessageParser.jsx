@@ -3,7 +3,7 @@ import React from 'react';
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
     if (message.includes('reason')) {
-      actions.handleReason();
+      actions.handleGridButton();
     }
   };
 

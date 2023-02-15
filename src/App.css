@@ -2,40 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #91b5dd;
-}
-
-.App-link {
-  color: #a6fb61;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Customize for react-chatbot-kit */
 
 .react-chatbot-kit-user-chat-message-container {
   display: flex;
@@ -63,6 +30,7 @@
   line-height: 140%;
   white-space: pre-wrap !important;
   word-break: keep-all !important;
+  margin-right: 50px !important;
 }
 
 .react-chatbot-kit-user-chat-message-arrow {
@@ -88,10 +56,10 @@
 
 .react-chatbot-kit-chat-message-container {
   overflow: auto !important;
-  height: 1280px !important;
-  width: 980px;
+  height: 1480px !important;
+  width: 1080px !important;
   margin-top: 100px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   scrollbar-width: none;
 }
 
@@ -104,14 +72,17 @@
   border-radius: 15px !important;
   font-size: 2.7rem !important;
   color: #000000 !important;
-  width: 584.5px !important;
+  width: 684.5px !important;
   margin-inline: 150px;
   line-height: 140%;
   white-space: pre-wrap !important;
   word-break: keep-all !important;
 }
 
-.custom-button-size {
+/* Common Components */
+/* GridButtons */
+.custom-button-list-size {
+  position: relative;
   width: 320px;
   height: 90px;
   display: flex;
@@ -122,3 +93,69 @@
   line-height: 112%;
   word-break: keep-all;
 }
+
+.custom-two-button-list-size {
+  position: relative;
+  width: 480px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  white-space: pre-wrap;
+  line-height: 112%;
+  word-break: keep-all;
+}
+
+/* Switches */
+.custom-button-size {
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  top: 343px;
+  left: 235px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  white-space: pre-wrap;
+  line-height: 112%;
+  word-break: keep-all;
+}
+
+.custom-address-search-button-size {
+  position: relative;
+  width: 180px;
+  height: 48px;
+  left: 220px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+/* Customize for ant-design */
+.ant-switch-handle {
+  margin-top: 6px !important;
+  margin-left: -1.0px !important;
+  width: 20.5px !important;
+  height: 20.5px !important;
+}
+
+.ant-modal-title {
+  font-size: 32px !important;
+  background-color: #f0f0f0 !important;
+}
+
+.ant-modal-content {
+  background-color: #f0f0f0 !important;
+}
+
+/* .ant-input-wrapper {
+  height: 64px;
+}
+
+.ant-input-suffix {
+  height: 64px;
+} */

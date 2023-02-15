@@ -1,0 +1,146 @@
+ {
+ "numInfo" : {
+	"info" :{
+	
+		"background" :{
+		
+			"width" : 205,
+			"height" : 125
+		
+		},
+		"keypad" :{
+		
+			"width" : 35,
+			"height" : 35
+		
+		},
+		"layouts" : 1
+	}
+
+},
+
+"numFixed" : [
+    {
+        "character": "BACKSPACE",
+        "point": {
+            "x": 5,
+            "y": 85
+        },
+		"scale": {
+		
+			"width" : 95,
+			"height" : 35
+		
+		},
+        "image": "Backspace.png"
+    },
+    {
+        "character": "DONE",
+        "point": {
+            "x": 105,
+            "y": 85
+        },
+		"scale": {
+		
+			"width" : 95,
+			"height" : 35
+		
+		},
+        "image": "Done.png"
+    }
+],
+
+"numLayouts" : 
+    {
+       
+        "layouts": [
+            {
+              
+                "points": [
+                    {
+                        "x": 5,
+                        "y": 5
+                    },
+                    {
+                        "x": 45,
+                        "y": 5
+                    },
+                    {
+                        "x": 85,
+                        "y": 5
+                    },
+                    {
+                        "x": 125,
+                        "y": 5
+                    },
+                    {
+                        "x": 5,
+                        "y": 45
+                    },
+                    {
+                        "x": 45,
+                        "y": 45
+                    },
+                    {
+                        "x": 85,
+                        "y": 45
+                    },
+                    {
+                        "x": 125,
+                        "y": 45
+                    },
+                    {
+                        "x": 165,
+                        "y": 5
+                    },
+                    {
+                        "x": 165,
+                        "y": 45
+                    }
+                ],
+                "keys": [
+                    {
+                        "character": "1",
+                        "image": "1.png"
+                    },
+                    {
+                        "character": "2",
+                        "image": "2.png"
+                    },
+                    {
+                        "character": "3",
+                        "image": "3.png"
+                    },
+                    {
+                        "character": "4",
+                        "image": "4.png"
+                    },
+                    {
+                        "character": "5",
+                        "image": "5.png"
+                    },
+                    {
+                        "character": "6",
+                        "image": "6.png"
+                    },
+                    {
+                        "character": "7",
+                        "image": "7.png"
+                    },
+                    {
+                        "character": "8",
+                        "image": "8.png"
+                    },
+                    {
+                        "character": "9",
+                        "image": "9.png"
+                    },
+                    {
+                        "character": "0",
+                        "image": "0.png"
+                    }
+                ]
+            }
+        ]
+    }
+}

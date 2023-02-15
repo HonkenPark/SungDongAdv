@@ -1,10 +1,8 @@
-import move_prev from './assets/images/move_prev.svg';
-import move_exit from './assets/images/move_exit.svg';
-
+import move_prev from 'assets/images/move_prev.svg';
+import move_exit from 'assets/images/move_exit.svg';
 import styled from 'styled-components';
 
-const Header = (props) => {
-  const formName = props.formName;
+const ChatbotHeader = (props) => {
 
   const goPrevScreen = () => {
     console.log('이전화면으로 아이콘 눌림')
@@ -16,11 +14,11 @@ const Header = (props) => {
 
   return(
     <HeaderBackground>
-      <MoveToImage src={move_prev} alt="본인인증 화면으로 되돌아 갑니다." onClick={goPrevScreen} />
+      <MoveToImage src={move_prev} alt="이전 화면으로 되돌아 갑니다." onClick={goPrevScreen} />
       <FormTitle>
-        <FromTitleText>{formName}</FromTitleText>
+        <FromTitleText>{props.formName}</FromTitleText>
       </FormTitle>
-      <ExitImage src={move_exit} alt="서식작성을 취소하고 메인화면ㄴ으로 되돌아 갑니다." onClick={goMainScreen} />
+      <ExitImage src={move_exit} alt="서식작성을 취소하고 메인화면으로 되돌아 갑니다." onClick={goMainScreen} />
     </HeaderBackground>
   )
 }
@@ -29,7 +27,7 @@ const HeaderBackground = styled.div`
   position: display;
   width: 1080px;
   height: 140px;
-  background: #033075;
+  background: #01325a;
 `;
 
 const MoveToImage = styled.img`
@@ -70,5 +68,4 @@ const FromTitleText = styled.h2`
   color: #FFFFFF;
 `
 
-
-export default Header;
+export default ChatbotHeader;
