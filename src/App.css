@@ -55,16 +55,17 @@
 }
 
 .react-chatbot-kit-chat-message-container {
+  padding: 0px !important;
   overflow: auto !important;
   height: 1480px !important;
   width: 1080px !important;
-  margin-top: 100px;
+  margin-top: 10px !important;
   /* margin-left: 10px; */
   scrollbar-width: none;
 }
 
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar {
-	display: none;
+	display: none !important;
 }
 
 .react-chatbot-kit-chat-bot-message {
@@ -77,6 +78,10 @@
   line-height: 140%;
   white-space: pre-wrap !important;
   word-break: keep-all !important;
+}
+
+.react-chatbot-kit-chat-input-form {
+  display: none !important;
 }
 
 /* Common Components */

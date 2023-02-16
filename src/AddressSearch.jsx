@@ -260,10 +260,10 @@ const SearchBoxButton = styled.button`
 
 const SearchButtonImage = styled.img`
   position: absolute;
-  width: 60px;
-  height: 60px;
-  left: calc(50% - 60px/2 - 0.37px);
-  top: calc(50% - 60px/2 - 0.5px);
+  width: 35px;
+  height: 35px;
+  left: calc(50% - 35px/2 + 0.31px);
+  top: calc(50% - 35px/2);
 `
 
 export default AddressSearch;
