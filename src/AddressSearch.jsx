@@ -35,11 +35,11 @@ const fetchAddressList = (keyword) => {
 }
 
 const AddressSearch = (props) => {
-  let keyboardObj_NS
   const location = useLocation();
   const vKeypad_NS = useRef();
   const vKeypadForm = useRef();
   const [keypadMode, setKeypadMode] = useState(true);
+  const [modalState, setModalState] = useState(false);
 
   const onSearch = () => {
     console.log(vKeypad_NS.current.value)
@@ -51,15 +51,6 @@ const AddressSearch = (props) => {
   }
 
   const toggelKeypad = () => {
-    if (keypadMode) {
-      keyboardObj_NS.unload();
-    }
-    else {
-      keyboardObj_NS = window.vKeypad_NS_Global.newInstance('qwerty', vKeypad_NS.current, 20);
-      keyboardObj_NS.load();
-      keyboardObj_NS.setIsKr(true);
-      keyboardObj_NS.setIsMobile(true);
-    }
     setKeypadMode(!keypadMode);
   }
 
@@ -75,23 +66,30 @@ const AddressSearch = (props) => {
         mode: "cors",
         body: form,
       })
-      .then(res => res.text())
-      .then(data => {
-          console.log(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
-          onSearch(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
-      })
-      .catch((error) => {
-          console.log("Error Occured: " + error);
-      });
+        .then(res => res.text())
+        .then(data => {
+            console.log(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
+            onSearch(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
+        })
+        .catch((error) => {
+            console.log("Error Occured: " + error);
+        });
     }
 
-    keyboardObj_NS = window.vKeypad_NS_Global.newInstance('qwerty', vKeypad_NS.current, 20);
-    keyboardObj_NS.load();
-    keyboardObj_NS.setIsKr(true);
-    keyboardObj_NS.setIsMobile(true);
-    // keyboardObj_NS.setDoneCallback(doneCallback);
-  }, [location])
+    const keyboardObj_NS = window.vKeypad_NS_Global.newInstance('qwerty', vKeypad_NS.current, 20);
+    if (keypadMode) {
+      keyboardObj_NS.load();
+      keyboardObj_NS.setIsKr(true);
+      keyboardObj_NS.setIsMobile(true);
+      // keyboardObj_NS.setDoneCallback(doneCallback);
+    }
 
+    return(()=>{
+      if (keypadMode) {
+        keyboardObj_NS.unload();
+      }
+    });
+  }, [keypadMode])
 
   return(
     <BackGround>
