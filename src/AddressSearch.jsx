@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { ConfigProvider, Divider, List, Button, Modal, Input, Space } from 'antd';
 import { decodeAes256 } from 'common/aes256Servie';
 
 import search_icon from 'assets/images/search.svg'
@@ -15,11 +16,42 @@ const fitChatbotScrollBottom = () => {
   document.getElementsByClassName('react-chatbot-kit-chat-message-container')[0].scrollTop = document.getElementsByClassName('react-chatbot-kit-chat-message-container')[0].scrollHeight;
 }
 
+const addressResultArr = [];
+const addressResultObj = {
+  zipCode: "",
+  roadAddr1: "",
+  roadAddr2: "",
+};
+
+const parseAddressResult = (results) => {
+  try {
+    const addrList = JSON.parse(results);
+    console.log(addrList)
+    if (addrList.results.common.totalCount > 0) {
+      addrList.results.juso.forEach((item, idx) => {
+        addressResultObj.zipCode = item.zipNo;
+        addressResultObj.roadAddr1 = item.roadAddrPart1;
+        addressResultObj.roadAddr2 = item.roadAddrPart2;
+        addressResultArr.push(addressResultObj)
+      })
+    }
+    else {
+      //TODO: Implement Message or Toast popup
+      console.log('result is zero')
+    }
+  } catch {
+    console.log(`Fail parse data: ${typeof results}`);
+  }
+}
+
 const AddressSearch = (props) => {
   const vKeypad_NS = useRef();
   const vKeypadForm = useRef();
   const [keypadMode, setKeypadMode] = useState(true);
-  const [modalState, setModalState] = useState(false);
+  const [modalState, setModalState] = useState({
+    open: false,
+    searchword: ""
+  });
 
   const fetchAddressList = (keyword) => {
     fetch('https://112.220.79.218:36400' + '/api/address-search', {
@@ -36,8 +68,8 @@ const AddressSearch = (props) => {
         return response.text();
       })
       .then((data) => {
-        console.log(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
-        setModalState(true);
+        parseAddressResult(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
+        setModalState({ open: true, searchword: keyword});
       })
       .catch((error) => {
         console.log(`Error Occured: ${error}`);
@@ -92,46 +124,88 @@ const AddressSearch = (props) => {
   }, [keypadMode])
 
   return(
-    <BackGround>
-      <DescriptionBody><br />
-        <DescriptionContent>아래와 같이 검색해주세요.</DescriptionContent>
-        <DescriptionContent>• 도로명 + 건물번호
-          <DescriptionContentColored>예) 성미산로29길 17-9, 세종대로 209</DescriptionContentColored>
-        </DescriptionContent>
-        <DescriptionContent>• 지역명(동/리) + 번지
-          <DescriptionContentColored>예) 화정동 964, 시흥동 886</DescriptionContentColored>
-        </DescriptionContent>
-        <DescriptionContent>• 지역명(동/리) + 건물명(아파트명)
-          <DescriptionContentColored>예) 인사동 종로빌딩, 정부서울</DescriptionContentColored>
-        </DescriptionContent>
-      </DescriptionBody>
-      <SearchBoxBackground>
-        <SearchboxTitle>주소검색은 도로명 또는 건물명으로 검색해주세요.<br /><p style={{fontSize: '20px'}}>화면터치가 아닌 키보드 사용을 원하시면 아래 키보드 아이콘을 눌러주세요.</p></SearchboxTitle>
-        <SearchBoxForm  id='vKeyPadForm'
-                        name='vKeyPadForm'
-                        ref={vKeypadForm}
-                        method="post"
-        >
-          <SearchBoxToggleButton onClick={toggelKeypad}>
-            {keypadMode ?
-              <ToggleKeyboardImage src={keyboard_icon} alt="일반 키보드 모드" /> :
-              <ToggleVkeypadImage src={vkeypad_icon} alt="터치 키패드 모드" />
-            }
-          </SearchBoxToggleButton>
-          <SearchBoxInput placeholder='도로명주소를 입력해주세요.'
-                          name={"vKeypadInput"}
-                          ref={vKeypad_NS}
-                          type={"text"}
-                          onFocus={clearInput}
-                          onKeyDown={handleKeyDown}
-          />
-          <SearchBoxButton onClick={onSearch}>
-            <SearchButtonImage src={search_icon} alt="검색하기" />
-          </SearchBoxButton>
-        </SearchBoxForm>
-      </SearchBoxBackground>
-      { keypadMode && <DummyComponentToResize /> }
-    </BackGround>
+    <ConfigProvider
+      theme={{
+        components: {
+            Modal: {
+            colorPrimary: '#3382E9',
+            fontSize: 32,
+            borderRadius: 10,
+            fontFamily: 'Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif',
+            lineWidth: 5,
+          },
+        }
+      }}
+    >
+      <BackGround>
+        <DescriptionBody><br />
+          <DescriptionContent>아래와 같이 검색해주세요.</DescriptionContent>
+          <DescriptionContent>• 도로명 + 건물번호
+            <DescriptionContentColored>예) 성미산로29길 17-9, 세종대로 209</DescriptionContentColored>
+          </DescriptionContent>
+          <DescriptionContent>• 지역명(동/리) + 번지
+            <DescriptionContentColored>예) 화정동 964, 시흥동 886</DescriptionContentColored>
+          </DescriptionContent>
+          <DescriptionContent>• 지역명(동/리) + 건물명(아파트명)
+            <DescriptionContentColored>예) 인사동 종로빌딩, 정부서울</DescriptionContentColored>
+          </DescriptionContent>
+        </DescriptionBody>
+        <SearchBoxBackground>
+          <SearchboxTitle>주소검색은 도로명 또는 건물명으로 검색해주세요.<br /><p style={{fontSize: '20px'}}>화면터치가 아닌 키보드 사용을 원하시면 아래 키보드 아이콘을 눌러주세요.</p></SearchboxTitle>
+          <SearchBoxForm  id='vKeyPadForm'
+                          name='vKeyPadForm'
+                          ref={vKeypadForm}
+                          method="post"
+          >
+            <SearchBoxToggleButton onClick={toggelKeypad}>
+              {keypadMode ?
+                <ToggleKeyboardImage src={keyboard_icon} alt="일반 키보드 모드" /> :
+                <ToggleVkeypadImage src={vkeypad_icon} alt="터치 키패드 모드" />
+              }
+            </SearchBoxToggleButton>
+            <SearchBoxInput placeholder='도로명주소를 입력해주세요.'
+                            name={"vKeypadInput"}
+                            ref={vKeypad_NS}
+                            type={"text"}
+                            onFocus={clearInput}
+                            onKeyDown={handleKeyDown}
+            />
+            <SearchBoxButton onClick={onSearch}>
+              <SearchButtonImage src={search_icon} alt="검색하기" />
+            </SearchBoxButton>
+          </SearchBoxForm>
+        </SearchBoxBackground>
+        { keypadMode && <DummyComponentToResize /> }
+      </BackGround>
+      <Modal
+        title={'“' + modalState.searchword + '” 에 대한 검색결과를 보여드릴게요.'}
+        centered
+        open={modalState.open}
+        onCancel={(e)=>{
+          console.log('종료')
+          setModalState({ open: false, searchword: ""});
+        }}
+        // mask={false}
+        colorPrimary={"#FFFFFF"}
+        width={1000}
+        cancelText="닫기"
+        footer={null}
+        style={{
+          textAlign: 'left',
+        }}
+        bodyStyle={{
+          // height: 1200,
+          backgroundColor: "#F0F0F0",
+        }}
+      >
+        {/* <List
+          size="large"
+          bordered
+          dataSource={addressResultArr}
+          renderItem={(item) => <List.Item>{item}</List.Item>}
+        /> */}
+      </Modal>
+    </ConfigProvider>
   )
 }
 
