@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { decodeAes256 } from 'common/aes256Servie';
-import { useLocation } from 'react-router-dom';
 
 import search_icon from 'assets/images/search.svg'
 import keyboard_icon from 'assets/images/toggle_keyboard.svg'
@@ -12,68 +11,66 @@ import 'common/kjscrypto.min.js';
 import 'common/vKeypad.react.min.js';
 import 'common/vKeypad_NS.js';
 
-const fetchAddressList = (keyword) => {
-  fetch('https://112.220.79.218:36400' + '/api/address-search', {
-    method: "POST",
-      cache: "no-cache",
-      mode: "cors",
-      headers: {
-          "Content-Type": "application/json;charset=utf-8",
-      },
-      dataType: "json",
-      body: JSON.stringify({ "keyword": keyword }),
-  })
-    .then((response) => {
-      return response.text();
-    })
-    .then((data) => {
-      console.log(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
-    })
-    .catch((error) => {
-      console.log(`Error Occured: ${error}`);
-    })
+const fitChatbotScrollBottom = () => {
+  document.getElementsByClassName('react-chatbot-kit-chat-message-container')[0].scrollTop = document.getElementsByClassName('react-chatbot-kit-chat-message-container')[0].scrollHeight;
 }
 
 const AddressSearch = (props) => {
-  const location = useLocation();
   const vKeypad_NS = useRef();
   const vKeypadForm = useRef();
   const [keypadMode, setKeypadMode] = useState(true);
   const [modalState, setModalState] = useState(false);
 
-  const onSearch = () => {
-    console.log(vKeypad_NS.current.value)
-    fetchAddressList(vKeypad_NS.current.value);
+  const fetchAddressList = (keyword) => {
+    fetch('https://112.220.79.218:36400' + '/api/address-search', {
+      method: "POST",
+        cache: "no-cache",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json;charset=utf-8",
+        },
+        dataType: "json",
+        body: JSON.stringify({ "keyword": keyword }),
+    })
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        console.log(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
+        setModalState(true);
+      })
+      .catch((error) => {
+        console.log(`Error Occured: ${error}`);
+      })
+  }
+
+  const onSearch = (e) => {
+    if (vKeypad_NS.current.value.length > 0) {
+      fetchAddressList(vKeypad_NS.current.value);
+    }
+    e && e.preventDefault();
   }
   
   const clearInput = (e) => {
     e.target.value = "";
   }
 
-  const toggelKeypad = () => {
+  const toggelKeypad = (e) => {
     setKeypadMode(!keypadMode);
+    e.preventDefault();
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      onSearch();
+      e.preventDefault();
+    }
   }
 
   useEffect(()=>{
     window.vKeypadGlobal.setDefaultServletURL('/servlets/vKeypad.do');
     const doneCallback = () => {
-      window.vKeypadGlobal.prepareSubmitAll();
-      const form = new FormData(document.getElementById('vKeyPadForm'));
-      console.log(form)
-      fetch('https://112.220.79.218:36400' + '/api/e2eproc', {
-        method: 'POST',
-        cache: "no-cache",
-        mode: "cors",
-        body: form,
-      })
-        .then(res => res.text())
-        .then(data => {
-            console.log(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
-            onSearch(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
-        })
-        .catch((error) => {
-            console.log("Error Occured: " + error);
-        });
+      onSearch();
     }
 
     const keyboardObj_NS = window.vKeypad_NS_Global.newInstance('qwerty', vKeypad_NS.current, 20);
@@ -81,8 +78,11 @@ const AddressSearch = (props) => {
       keyboardObj_NS.load();
       keyboardObj_NS.setIsKr(true);
       keyboardObj_NS.setIsMobile(true);
-      // keyboardObj_NS.setDoneCallback(doneCallback);
+      keyboardObj_NS.setDoneCallback(doneCallback);
+      fitChatbotScrollBottom();
     }
+
+    vKeypad_NS.current.focus();
 
     return(()=>{
       if (keypadMode) {
@@ -122,12 +122,15 @@ const AddressSearch = (props) => {
                           name={"vKeypadInput"}
                           ref={vKeypad_NS}
                           type={"text"}
-                          onFocus={clearInput} />
+                          onFocus={clearInput}
+                          onKeyDown={handleKeyDown}
+          />
           <SearchBoxButton onClick={onSearch}>
             <SearchButtonImage src={search_icon} alt="검색하기" />
           </SearchBoxButton>
         </SearchBoxForm>
       </SearchBoxBackground>
+      { keypadMode && <DummyComponentToResize /> }
     </BackGround>
   )
 }
@@ -195,7 +198,7 @@ const SearchBoxForm = styled.form`
   top: 75px;
 `
 
-const SearchBoxToggleButton = styled.div`
+const SearchBoxToggleButton = styled.button`
   box-sizing: border-box;
 
   position: absolute;
@@ -262,6 +265,15 @@ const SearchButtonImage = styled.img`
   height: 35px;
   left: calc(50% - 35px/2 + 0.31px);
   top: calc(50% - 35px/2);
+`
+
+const DummyComponentToResize = styled.div`
+  position: absolute;
+  width: 740px;
+  height: 360px;
+  top: 600px;
+
+  opacity: 0;
 `
 
 export default AddressSearch;
