@@ -16,22 +16,27 @@ const fitChatbotScrollBottom = () => {
   document.getElementsByClassName('react-chatbot-kit-chat-message-container')[0].scrollTop = document.getElementsByClassName('react-chatbot-kit-chat-message-container')[0].scrollHeight;
 }
 
-const addressResultArr = [];
-const addressResultObj = {
-  zipCode: "",
-  roadAddr1: "",
-  roadAddr2: "",
-};
+let addressResultArr = [];
 
 const parseAddressResult = (results) => {
+  addressResultArr.length = 0;
+  console.log(addressResultArr)
   try {
     const addrList = JSON.parse(results);
     console.log(addrList)
+    console.log(addrList.results.common.totalCount)
     if (addrList.results.common.totalCount > 0) {
       addrList.results.juso.forEach((item, idx) => {
+        const addressResultObj = {
+          zipCode: "",
+          roadAddr1: "",
+          roadAddr2: "",
+          jibunAddr: "",
+        };
         addressResultObj.zipCode = item.zipNo;
         addressResultObj.roadAddr1 = item.roadAddrPart1;
         addressResultObj.roadAddr2 = item.roadAddrPart2;
+        addressResultObj.jibunAddr = item.jibunAddr;
         addressResultArr.push(addressResultObj)
       })
     }
@@ -70,6 +75,7 @@ const AddressSearch = (props) => {
       .then((data) => {
         parseAddressResult(decodeAes256(data, 'bXotZ292LWtpb3NrLXNlY3JldC1rZXk='));
         setModalState({ open: true, searchword: keyword});
+        console.log(addressResultArr);
       })
       .catch((error) => {
         console.log(`Error Occured: ${error}`);
@@ -175,7 +181,7 @@ const AddressSearch = (props) => {
             </SearchBoxButton>
           </SearchBoxForm>
         </SearchBoxBackground>
-        { keypadMode && <DummyComponentToResize /> }
+        { keypadMode ? <DummyComponentToResize /> : <></> }
       </BackGround>
       <Modal
         title={'“' + modalState.searchword + '” 에 대한 검색결과를 보여드릴게요.'}
@@ -198,12 +204,32 @@ const AddressSearch = (props) => {
           backgroundColor: "#F0F0F0",
         }}
       >
-        {/* <List
-          size="large"
+        <List
+          size="small"
           bordered
           dataSource={addressResultArr}
-          renderItem={(item) => <List.Item>{item}</List.Item>}
-        /> */}
+          renderItem={(item) => <List.Item>
+            <AddressResultList>
+              <AddressResultZipCode>{item.zipCode}</AddressResultZipCode>
+              <AddressResultRoadAddrBody>
+                <AddressResultRoadAddrType>도로명</AddressResultRoadAddrType>
+                {item.roadAddr2 ?
+                  <AddressResultRoadAddrAddress>
+                    {item.roadAddr1}<br />{item.roadAddr2}
+                  </AddressResultRoadAddrAddress> :
+                  <AddressResultRoadAddrAddress>
+                    {item.roadAddr1}
+                  </AddressResultRoadAddrAddress>
+                }
+              </AddressResultRoadAddrBody>
+              <AddressResultJibunAddrBody>
+                <AddressResultJibunAddrType>지번</AddressResultJibunAddrType>
+                <AddressResultJibunAddrAddress>{item.jibunAddr}</AddressResultJibunAddrAddress>
+              </AddressResultJibunAddrBody>
+              <AddressResultSelectButton>선택</AddressResultSelectButton>
+            </AddressResultList>
+          </List.Item>}
+        />
       </Modal>
     </ConfigProvider>
   )
@@ -339,6 +365,157 @@ const SearchButtonImage = styled.img`
   height: 35px;
   left: calc(50% - 35px/2 + 0.31px);
   top: calc(50% - 35px/2);
+`
+
+const AddressResultList = styled.div`
+  box-sizing: border-box;
+
+  position: relative;
+  width: 932px;
+  height: 171px;
+
+  background: #FFFFFF;
+  border: 2px solid #3382E9;
+  border-radius: 20px;
+`
+
+const AddressResultZipCode = styled.div`
+  position: relative;
+  width: 113px;
+  height: 37px;
+  left: 20px;
+  top: 65px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 22px;
+  /* identical to box height, or 69% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+`
+
+const AddressResultRoadAddrBody = styled.div`
+  position: absolute;
+  width: 650px;
+  height: 85px;
+  left: 135px;
+  top: 10px;
+`
+
+const AddressResultRoadAddrType = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  margin-top: 20px;
+  width: 60px;
+  height: 30px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+
+  border: 2px solid #3382E9;
+  border-radius: 3px;
+  color: #3382E9;
+`
+
+const AddressResultRoadAddrAddress = styled.div`
+  position: absolute;
+  width: 580px;
+  height: 85px;
+  left: 71px;
+  top: -7px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  word-break: keep-all;
+  /* or 92% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+`
+
+const AddressResultJibunAddrBody = styled.div`
+  position: absolute;
+  width: 650px;
+  height: 86px;
+  left: 135px;
+  top: 85px;
+`
+
+const AddressResultJibunAddrType = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  margin-top: 20px;
+  width: 60px;
+  height: 30px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+
+  border: 2px solid #5E5E5E;
+  border-radius: 3px;
+  color: #5E5E5E;
+`
+
+const AddressResultJibunAddrAddress = styled.div`
+  position: relative;
+  width: 580px;
+  height: 85px;
+  left: 71px;
+  top: -7px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  word-break: keep-all;
+  /* or 92% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+`
+
+const AddressResultSelectButton = styled.div`
+  position: absolute;
+  width: 100px;
+  height: 56px;
+  left: 795px;
+  top: 50px;
+
+  background: #3382E9;
+  border-radius: 10px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  display: inline-grid;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
 `
 
 const DummyComponentToResize = styled.div`
