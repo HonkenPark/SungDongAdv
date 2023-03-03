@@ -141,6 +141,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }
   };
 
+  const handleAddressSelect = value => {
+    const userMessage = createClientMessage(value);
+    const reasonMessage = createChatBotMessage('이곳에 사시는군요 후후');
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, userMessage, reasonMessage],
+    }));
+  };
+
   return (
     <div>
       {
@@ -151,6 +160,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
               handleSwitch,
               handleReceipt,
               handleTwoButtonsRow,
+              handleAddressSelect,
             },
           })
         })

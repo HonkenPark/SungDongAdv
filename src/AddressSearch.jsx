@@ -105,6 +105,14 @@ const AddressSearch = (props) => {
     }
   }
 
+  const onSelect = (idx) => {
+    console.log(addressResultArr[idx].roadAddr1);
+    console.log(addressResultArr[idx].roadAddr2);
+    console.log(addressResultArr[idx].jibunAddr);
+    setModalState({ open: false, searchword: ""});
+    props.actionProvider.handleAddressSelect(addressResultArr[idx].roadAddr1 + addressResultArr[idx].roadAddr2);
+  }
+
   useEffect(()=>{
     window.vKeypadGlobal.setDefaultServletURL('/servlets/vKeypad.do');
     const doneCallback = () => {
@@ -208,7 +216,7 @@ const AddressSearch = (props) => {
           size="small"
           bordered
           dataSource={addressResultArr}
-          renderItem={(item) => <List.Item>
+          renderItem={(item, idx) => <List.Item>
             <AddressResultList>
               <AddressResultZipCode>{item.zipCode}</AddressResultZipCode>
               <AddressResultRoadAddrBody>
@@ -226,7 +234,7 @@ const AddressSearch = (props) => {
                 <AddressResultJibunAddrType>지번</AddressResultJibunAddrType>
                 <AddressResultJibunAddrAddress>{item.jibunAddr}</AddressResultJibunAddrAddress>
               </AddressResultJibunAddrBody>
-              <AddressResultSelectButton>선택</AddressResultSelectButton>
+              <AddressResultSelectButton onClick={(e)=>{onSelect(idx)}}>선택</AddressResultSelectButton>
             </AddressResultList>
           </List.Item>}
         />
