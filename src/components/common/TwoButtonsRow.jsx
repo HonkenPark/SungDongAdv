@@ -21,7 +21,7 @@ const TwoButtonsRow = (props) => {
         className="custom-two-button-list-size"
         type="primary"
         onClick={(e)=>{
-          props.actionProvider.handleTwoButtonsRow(item.value)(item.text)(e)
+          props.actionProvider.handleTwoButtonsRow(item.value)(item.type)(item.text)(e)
         }}
       >
         {item.text}

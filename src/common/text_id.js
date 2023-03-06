@@ -1539,7 +1539,7 @@ export const FM_0000200_TEXT = {
     { value: 2, type: 'switch', kor: "점자스티커를 신청할게요.", default: false },
     { value: 3, type: 'switch', kor: "수수료 면제대상에 해당돼요.", default: false },
   ],
-  receives: [
+  receiveways: [
     { value: 1, type: 'receive', kor: "신청기관 방문" },
     { value: 2, type: 'receive', kor: "주민등록기관 방문" },
     { value: 3, type: 'receive', kor: "등기우편" },
@@ -1547,6 +1547,10 @@ export const FM_0000200_TEXT = {
   addressTypes: [
     { value: 1, type: 'addressType', text: "주민등록지 주소" },
     { value: 2, type: 'addressType', text: "다른 주소 입력" },
+  ],
+  empfAgreeAnswers: [
+    { value: 1, type: 'empfAgreeAnswer', text: "면제 대상자가 아니에요" },
+    { value: 2, type: 'empfAgreeAnswer', text: "동의하고 수수료 면제 신청할게요" },
   ],
 };
 

@@ -110,7 +110,9 @@ const AddressSearch = (props) => {
     console.log(addressResultArr[idx].roadAddr2);
     console.log(addressResultArr[idx].jibunAddr);
     setModalState({ open: false, searchword: ""});
-    props.actionProvider.handleAddressSelect(addressResultArr[idx].roadAddr1 + addressResultArr[idx].roadAddr2);
+    props.actionProvider.handleAddressSelect(
+      addressResultArr[idx].roadAddr1 + " " + addressResultArr[idx].roadAddr2
+    );
   }
 
   useEffect(()=>{

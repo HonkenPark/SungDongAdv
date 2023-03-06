@@ -7,8 +7,9 @@ import KioskHelperAvatar from "components/common/KioskHelperAvatar";
 import GridButtons from "components/common/GridButtons";
 import Switches from "components/common/Switches";
 import TwoButtonsRow from "components/common/TwoButtonsRow";
-import AddressModal from "../../AddressModal";
-import AddressSearch from "../../AddressSearch";
+import AddressModal from "components/common/AddressModal";
+import AddressSearch from "components/common/AddressSearch";
+import SignatureModal from "components/common/SignatureModal";
 
 const keyInfo = {
   userName: '박홍근',
@@ -37,7 +38,7 @@ const config = {
     },
     {
       widgetName: "receiveways",
-      widgetFunc: (props) => <GridButtons {...props} items={FM_0000200_TEXT.receives} />,
+      widgetFunc: (props) => <GridButtons {...props} items={FM_0000200_TEXT.receiveways} />,
     },
     {
       widgetName: "addressTypes",
@@ -47,6 +48,14 @@ const config = {
       widgetName: "addrSearchModal",
       widgetFunc: (props) => <AddressSearch {...props} />,
       // props: {modal:true}
+    },
+    {
+      widgetName: "empfAgreeAnswers",
+      widgetFunc: (props) => <TwoButtonsRow {...props} items={FM_0000200_TEXT.empfAgreeAnswers} />,
+    },
+    {
+      widgetName: "signatureModal",
+      widgetFunc: (props) => <SignatureModal {...props} />,
     },
   ],
   customStyles: {

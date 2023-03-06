@@ -29,13 +29,15 @@ const parseMsgByReason = (value) => {
   }
 }
 
-const parseMsgByReceipt = (value) => {
+const parseMsgByReceive = (value) => {
   switch(value) {
     default:
     case 1:
-      return '신청기관인 이곳에 다시 방문하시는군요.🙂';
+      return '신청기관에서 받으실 수 있게 처리해드릴게요.🙂'
     case 2:
-      return '주민등록기관으로 가셔서 수령하시는군요.🙂';
+      return '주민등록기관에서 받으실 수 있게 처리해드릴게요.🙂';
+    case 3:
+      return '어떤 주소로 등기우편을 보내드릴까요?🙂';
   }
 }
 
@@ -57,16 +59,22 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }
     else if (type === 'receive') {
       const userMessage = createClientMessage(answer)
+      const respMessage = parseMsgByReceive(value);
+
       if (value === 1 || value === 2) {
-        const reasonMessage = createChatBotMessage(parseMsgByReceipt(value));
-        // TODO:
+        const reasonMessage = createChatBotMessage(respMessage);
+        const resMsgInfoAgreement1 = createChatBotMessage('수수료 면제 대상 여부를 알려주세요.', {delay: 1000});
+        const resMsgInfoAgreement2 = createChatBotMessage('면제 대상이시면 행정정보 공동이용 동의 후 수수료 면제 신청이 가능해요.🙂', {
+          delay: 1000,
+          widget: "empfAgreeAnswers",
+        });
         setState((prev) => ({
           ...prev,
-          messages: [...prev.messages, userMessage, reasonMessage],
+          messages: [...prev.messages, userMessage, reasonMessage, resMsgInfoAgreement1, resMsgInfoAgreement2],
         }));
       }
       else {
-        const reasonMessage = createChatBotMessage('어떤 주소로 등기우편을 보내드릴까요?🙂', {
+        const reasonMessage = createChatBotMessage(respMessage, {
           delay: 800,
           widget: "addressTypes",
         });
@@ -92,61 +100,79 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
-  const handleReceipt = value => text => e => {
-    const userMessage = createClientMessage(text)
+  // const handleReceive = value => text => e => {
+  //   const userMessage = createClientMessage(text)
 
-    if (value === 1 || value === 2) {
-      const reasonMessage = createChatBotMessage(parseMsgByReceipt(value));
+  //   if (value === 1 || value === 2) {
+  //     const reasonMessage = createChatBotMessage(parseMsgByReceive(value));
 
-      setState((prev) => ({
-        ...prev,
-        messages: [...prev.messages, userMessage, reasonMessage],
-      }));
-    }
-    else {
-      const reasonMessage = createChatBotMessage('어떤 주소로 등기우편을 보내드릴까요?🙂', {
-        delay: 800,
-        widget: "addressType",
-      });
+  //     setState((prev) => ({
+  //       ...prev,
+  //       messages: [...prev.messages, userMessage, reasonMessage],
+  //     }));
+  //   }
+  //   else {
+  //     const reasonMessage = createChatBotMessage('어떤 주소로 등기우편을 보내드릴까요?2🙂', {
+  //       delay: 800,
+  //       widget: "addressType",
+  //     });
 
-      setState((prev) => ({
-        ...prev,
-        messages: [...prev.messages, userMessage, reasonMessage],
-      }));
-    }
-  };
+  //     setState((prev) => ({
+  //       ...prev,
+  //       messages: [...prev.messages, userMessage, reasonMessage],
+  //     }));
+  //   }
+  // };
 
-  const handleTwoButtonsRow = value => text => e => {
+  const handleTwoButtonsRow = value => type => text => e => {
     const userMessage = createClientMessage(text);
 
-    if (value === 1) {
-      const resMsg = createChatBotMessage('주민등록 주소로 등기우편을 받으실 수 있게 처리할게요.🤗');
-      const resMsgInfoAgreement1 = createChatBotMessage('행정정보 공동이용에 대한 동의 여부를 선택해주세요.', {delay: 1000});
-      const resMsgInfoAgreement2 = createChatBotMessage('이는 담당 공무원이 업무처리를 위해 행정정보 공동이용 시스템을 이용하여 신청인의 정보를 확인할 수 있습니다.', {delay: 1000});
-      const resMsgInfoAgreement3 = createChatBotMessage('동의하지 않을 경우, 관련증명자료를 신청인이 직접 제출해야 합니다.', {delay: 1000});
-      const resMsgInfoAgreement4 = createChatBotMessage('행정정보 공동이용에 동의하시나요?', {delay: 1000});
-      setState((prev) => ({
-        ...prev,
-        messages: [...prev.messages, userMessage, resMsg, resMsgInfoAgreement1, resMsgInfoAgreement2, resMsgInfoAgreement3, resMsgInfoAgreement4],
-      }));
+    if (type === 'addressType') {
+      if (value === 1) {
+        const resMsg = createChatBotMessage('주민등록 주소로 등기우편을 받으실 수 있게 처리할게요.🤗');
+        const resMsgInfoAgreement1 = createChatBotMessage('수수료 면제 대상 여부를 알려주세요.', {delay: 1000});
+        const resMsgInfoAgreement2 = createChatBotMessage('면제 대상이시면 행정정보 공동이용 동의 후 수수료 면제 신청이 가능해요.🙂', {
+          delay: 1000,
+          widget: "empfAgreeAnswers",
+        });
+
+        setState((prev) => ({
+          ...prev,
+          messages: [...prev.messages, userMessage, resMsg, resMsgInfoAgreement1, resMsgInfoAgreement2],
+        }));
+      }
+      else if (value === 2) {
+        const resMsgAskAddress = createChatBotMessage('등기우편을 받으실 주소 입력을 도와드릴게요.😊', {
+          widget: 'addrSearchModal',
+        });
+        setState((prev) => ({
+          ...prev,
+          messages: [...prev.messages, userMessage, resMsgAskAddress],
+        }));
+      }
     }
-    else {
-      const resMsgAskAddress = createChatBotMessage('등기우편을 받으실 주소 입력을 도와드릴게요.😊', {
-        widget: 'addrSearchModal',
+    else if (type === 'empfAgreeAnswer') {
+      const resMsg = createChatBotMessage('서식 신청을 완료하기 위해 신청인의 서명이 필요해요.🙂', {
+        delay: 800,
+        widget: "signatureModal",
       });
       setState((prev) => ({
         ...prev,
-        messages: [...prev.messages, userMessage, resMsgAskAddress],
+        messages: [...prev.messages, userMessage, resMsg],
       }));
     }
   };
 
   const handleAddressSelect = value => {
     const userMessage = createClientMessage(value);
-    const reasonMessage = createChatBotMessage('이곳에 사시는군요 후후');
+    const resMsgInfoAgreement1 = createChatBotMessage('수수료 면제 대상 여부를 알려주세요.', {delay: 1000});
+    const resMsgInfoAgreement2 = createChatBotMessage('면제 대상이시면 행정정보 공동이용 동의 후 수수료 면제 신청이 가능해요.🙂', {
+      delay: 1000,
+      widget: "empfAgreeAnswers",
+    });
     setState((prev) => ({
       ...prev,
-      messages: [...prev.messages, userMessage, reasonMessage],
+      messages: [...prev.messages, userMessage, resMsgInfoAgreement1, resMsgInfoAgreement2],
     }));
   };
 
@@ -158,7 +184,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             actions: {
               handleGridButton,
               handleSwitch,
-              handleReceipt,
+              // handleReceive,
               handleTwoButtonsRow,
               handleAddressSelect,
             },

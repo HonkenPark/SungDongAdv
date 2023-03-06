@@ -26,7 +26,7 @@ const Receipt = (props) => {
         className="custom-button-list-size"
         type="primary"
         onClick={(e) => {
-          props.actionProvider.handleReceipt(receiptWay.value)(receiptWay.text)(e);
+          props.actionProvider.handleReceive(receiptWay.value)(receiptWay.text)(e);
         }}
       >
         {receiptWay.text}
